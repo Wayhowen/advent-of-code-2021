@@ -12,7 +12,6 @@ class Solver:
         last_sliding_window = 0
         increases = 0
         while iteration < len(depths) - 2:
-            print(iteration)
             sliding_window = depths[iteration] + depths[iteration + 1] + depths[iteration + 2]
             if last_sliding_window and sliding_window > last_sliding_window:
                 increases += 1
