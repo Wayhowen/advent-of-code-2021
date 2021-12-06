@@ -11,9 +11,12 @@ class Solver:
             for board in self.boards:
                 board.mark(number)
 
-                if board.won():
-                    unmarked_numbers = board.get_unmarked_numbers()
-                    return sum(unmarked_numbers) * number
+            for board in self.boards:
+                if board.won() and len(self.boards) > 1:
+                    self.boards.remove(board)
+
+            if len(self.boards) == 1 and self.boards[0].won():
+                return sum(self.boards[0].get_unmarked_numbers()) * number
 
 
 class Board:
