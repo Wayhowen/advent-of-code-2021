@@ -2,8 +2,8 @@ import importlib
 
 from utils import FileReader
 
-DAYS = 4
-TASKS = 2
+DAYS = 7
+TASKS = 1
 SKIP_LIST = [(8, 1), (8, 2)]
 
 
